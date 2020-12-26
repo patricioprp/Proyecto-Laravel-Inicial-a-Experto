@@ -3,9 +3,18 @@ Vamos a desarrollar un apunte con las principales y mas utiles instruccion del c
 
 ## Las rutas
 _Con estas lineas podemos pasar una variable por get y en caso de que no se lo envie, se le asigna un valor por defecto(invitado), tambien validamos que 
-lo que se envie en la variable sea solo texto, mayusculas y/o minusculas(representa un nombre) y no permite que existan numeros._
-![https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png]
-(https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png)
+lo que se envie en la variable sea solo texto, mayusculas y/o minusculas(representa un nombre) y no permite que existan numeros ayudandonos con una expresion regular.
+Al parametro lo hacemos opcional agregando al final '?'_
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png)
+
+Supongamos que tenemos muchos lugares en el proyecto donde se hace referencia a la misma url (contacto),imaginemos que nos piden cambiar contacto a contactanos, deberiamos ir a cada una de las lineasy cambi arlas una por una, lo que seria muy engorroso.
+## Rutas sin nombre
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutasSinNombre.png)
+
+## Rutas con nombre
+La solucion es nombrar a cada una de estas rutas, luego cada vez que se cambie la url no se alterara el resto del codigo.
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutaConNombre.png)
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
