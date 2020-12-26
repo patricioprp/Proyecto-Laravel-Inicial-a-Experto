@@ -1,6 +1,5 @@
 # Proyecto-Laravel-Inicial-a-Experto
-
-_Acá va un párrafo que describa lo que es el proyecto_
+Vamos a desarrollar un apunte con las principales y mas utiles instruccion del curso Laravel de pincipiantes a experto de Aprendible
 
 ## Comenzando 🚀
 
