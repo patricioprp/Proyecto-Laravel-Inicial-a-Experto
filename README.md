@@ -2,10 +2,10 @@
 Vamos a desarrollar un apunte con las principales y mas utiles instruccion del curso Laravel de pincipiantes a experto de Aprendible
 
 ## Las rutas
- Route::get('/saludo/{name?}', function($name='invitado'){
-      return 'hola '.$name;
- })->where('name',"[A-Za-z]+");
-
+_Con estas lineas podemos pasar una variable por get y en caso de que no se lo envie, se le asigna un valor por defecto(invitado), tambien validamos que 
+lo que se envie en la variable sea solo texto, mayusculas y/o minusculas(representa un nombre) y no permite que existan numeros._
+![https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png]
+(https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png)
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
@@ -104,6 +104,3 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 * etc.
 
 
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
