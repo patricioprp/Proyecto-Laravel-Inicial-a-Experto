@@ -12,17 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo "<a href=".route('contactos').">Contactos</a><br>";
+    echo "<a href=".route('contactos').">Contactos</a><br>";
+    echo "<a href=".route('contactos').">Contactos</a><br>";
+    echo "<a href=".route('contactos').">Contactos</a><br>";
+    echo "<a href=".route('contactos').">Contactos</a><br>";
 });
 
+Route::get('contactanos',['as'=>'contactos',function(){
+    return 'Seccion de contactos';
+}]);
 
-//definimos un parametro opcional
-// Route::get('/saludo/{name?}', function($name='invitado'){
-//      return 'hola '.$name;
-// });
-
-//si queremos hacer que en el name valide que no se ingrese numeros
  Route::get('/saludo/{name?}', function($name='invitado'){
       return 'hola '.$name;
  })->where('name',"[A-Za-z]+");
-  //esta expresion regular nos hace la validadcion que solo recibe letras mayusculas o minusculas
+ 
