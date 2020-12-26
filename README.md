@@ -1,6 +1,11 @@
 # Proyecto-Laravel-Inicial-a-Experto
 Vamos a desarrollar un apunte con las principales y mas utiles instruccion del curso Laravel de pincipiantes a experto de Aprendible
 
+## Las rutas
+ Route::get('/saludo/{name?}', function($name='invitado'){
+      return 'hola '.$name;
+ })->where('name',"[A-Za-z]+");
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
