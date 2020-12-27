@@ -11,19 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    echo "<a href=".route('contactos').">Contactos</a><br>";
-    echo "<a href=".route('contactos').">Contactos</a><br>";
-    echo "<a href=".route('contactos').">Contactos</a><br>";
-    echo "<a href=".route('contactos').">Contactos</a><br>";
-    echo "<a href=".route('contactos').">Contactos</a><br>";
-});
+Route::get('/', ['as' => 'home' ,function () {
+    return view('home');
+}]);
 
-Route::get('contactanos',['as'=>'contactos',function(){
+Route::get('contactanos',['as'=>'contacto',function(){
     return 'Seccion de contactos';
 }]);
 
- Route::get('/saludo/{name?}', function($name='invitado'){
-      return 'hola '.$name;
- })->where('name',"[A-Za-z]+");
+ Route::get('/saludo/{name?}', ['as' => 'saludo',function($name='invitado'){
+     $html = "<h1>Contenido en html</h1>";//simula el valor ingresado por el usuario en un formulario
+     $script = "<script>alert('Problema XXS-Cross Site Scripting')</script>";
+      return view('saludo',compact('name','html','script'));
+ }])->where('name',"[A-Za-z]+");
  
