@@ -3,9 +3,39 @@ Vamos a desarrollar un apunte con las principales y mas utiles instruccion del c
 
 ## Las rutas
 _Con estas lineas podemos pasar una variable por get y en caso de que no se lo envie, se le asigna un valor por defecto(invitado), tambien validamos que 
-lo que se envie en la variable sea solo texto, mayusculas y/o minusculas(representa un nombre) y no permite que existan numeros._
-![https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png]
-(https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png)
+lo que se envie en la variable sea solo texto, mayusculas y/o minusculas(representa un nombre) y no permite que existan numeros ayudandonos con una expresion regular.
+Al parametro lo hacemos opcional agregando al final '?'_
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutas.png)
+
+Supongamos que tenemos muchos lugares en el proyecto donde se hace referencia a la misma url (contacto),imaginemos que nos piden cambiar contacto a contactanos, deberiamos ir a cada una de las lineasy cambi arlas una por una, lo que seria muy engorroso.
+## Rutas sin nombre
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutasSinNombre.png)
+
+## Rutas con nombre
+La solucion es nombrar a cada una de estas rutas, luego cada vez que se cambie la url no se alterara el resto del codigo.
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutaConNombre.png)
+
+##Inyeccion de dependencias en la vista
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/inyeccion.png)
+Podemos ver que en la linea 11 mostramos la variable sin la expresion de blade, con php nativo, vemos que a la variable la engloba una funcion "e" lo que hace es invocar a la funcion nativa de php "htmlentities($name)" para protegernos de XXS Cross Site Scripting o inyeccion de codigo malicioso, evitando que s ejecuten script causando comportamientos no deseados, sin embargo a veces damos el permiso al usuario de ingresar codigo html, css o js a traves de un formulario, como el siguiente ejemplo:
+
+Vamos a simular el ingreso de un texto con codigo html por un usuario en la variable _$hmtl_
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/rutasInyeccion.png)
+
+y en la vista vamos a imprimir la variable de dos formas
+
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/bladeInyeccion.png)
+El resultado sera
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/pantalla.png)
+Los signos de admiracion sirven para alertarnos de que el codigo no esta siendo escapado y puede ser peligroso.
+
+
+Ahora vamos a ver un ejemplo donde inyecctamos js
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/script.png)
+Resultado en pantalla con {!!Script!!}
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/resultadoScript.png)
+
+Este script ya esta cambiando el comportamiento de nuestra apliacion, es facil saber lo peligroso que seria por ejemplo inyecctar codigo sql por ejemplo.
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
