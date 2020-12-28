@@ -36,6 +36,13 @@ Resultado en pantalla con {!!Script!!}
 ![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/resultadoScript.png)
 
 Este script ya esta cambiando el comportamiento de nuestra apliacion, es facil saber lo peligroso que seria por ejemplo inyecctar codigo sql por ejemplo.
+
+##Haciendo un loop con blade
+Se define un array y en las vista vamos a escribir el codigo para mostrar todos los elementos del array y en el caso de que este vacio tambien lo tiene en cuenta con forelse-empty, mostrando un mensaje "no hay consolas" desde el for y desde el if, al igual que si hay solo una consola o mas de una.
+![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/for.png)
+
+
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
