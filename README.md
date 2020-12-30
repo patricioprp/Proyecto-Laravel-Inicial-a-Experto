@@ -41,6 +41,8 @@ Este script ya esta cambiando el comportamiento de nuestra apliacion, es facil s
 Se define un array y en las vista vamos a escribir el codigo para mostrar todos los elementos del array y en el caso de que este vacio tambien lo tiene en cuenta con forelse-empty, mostrando un mensaje "no hay consolas" desde el for y desde el if, al igual que si hay solo una consola o mas de una.
 ![alt tag](https://github.com/patricioprp/Proyecto-Laravel-Inicial-a-Experto/blob/main/public/capturas/for.png)
 
+La documentacion esta mas detallada en [githug](https://docs.google.com/document/d/1-usvfgZFOf-d6BQZYmDfCR3a0iGwtxmVPKsmvGHmjb8/edit)
+
 
 
 ## Comenzando 🚀
