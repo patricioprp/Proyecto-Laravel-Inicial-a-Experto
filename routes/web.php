@@ -11,17 +11,11 @@
 |
 */
 
-Route::get('/', ['as' => 'home' ,function () {
-    return view('home');
-}]);
+Route::get('/', ['as' => 'home' ,'uses' => 'PagesController@home']);
 
-Route::get('contactanos',['as'=>'contacto',function(){
-    return 'Seccion de contactos';
-}]);
+Route::get('contactanos',['as'=>'contacto', 'uses' => 'PagesController@contact']);
 
- Route::get('/saludo/{name?}', ['as' => 'saludo',function($name='invitado'){
-     $html = "<h1>Contenido en html</h1>";//simula el valor ingresado por el usuario en un formulario
-     $script = "<script>alert('Problema XXS-Cross Site Scripting')</script>";
-      return view('saludo',compact('name','html','script'));
- }])->where('name',"[A-Za-z]+");
+Route::post('contacto', 'PagesController@mensajes');
+
+ Route::get('/saludo/{name?}', ['as' => 'saludo','uses' => 'PagesController@saludo'])->where('name',"[A-Za-z]+");
  
